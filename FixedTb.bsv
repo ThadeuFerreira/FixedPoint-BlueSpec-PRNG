@@ -47,7 +47,7 @@ module mkFixedTb (Empty);
       while (i < (1 << n))
 	 action
 	 	Int32WORD v <-  rng.get()  ;
-		FixedPoint#(33,33) x = (0.000000000232830643653869)* fromUInt(unpack(v)); 
+		FixedPoint#(33,52) x = (0.000000000232830643653869)* fromUInt(unpack(v)); 
 		fxptWrite( 10, x ) ; $display("" ); 
 	    i <= i + 1;
 	 endaction
