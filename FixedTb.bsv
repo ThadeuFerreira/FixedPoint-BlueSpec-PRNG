@@ -55,9 +55,9 @@ module mkFixedTb (Empty);
     CosSinPair#(33,52) cos_sin_pair <- cos_and_sin.getCosSinPair;
     //fxptWrite( 10, cos_sin_pair.cos ) ; $display("" ); 
     $display(i);
-    let val = fromUInt(unpack(i));
+    FixedPoint#(33, 52)  val = fromUInt(i*i);
      fxptWrite( 10, val) ; $display("" ); 
-   FixedPoint#(33, 52) angle_adjustment = fromUInt(i*i);
+   FixedPoint#(33, 52) angle_adjustment = fromUInt(i);
     sqrt.request.put(angle_adjustment);
   endrule
 
