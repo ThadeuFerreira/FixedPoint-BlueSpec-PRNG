@@ -18,6 +18,10 @@ import SquareRoot::*;
 import ClientServer::*;
 import FIFOF::*;
 import GetPut::*;
+import UnitAppendList :: * ;
+import BUtils::*;
+import Assert::*;
+
 
 //`define isDebug True  // uncomment this line to display error
 `define cordicIters 16 // no. iterations cordic performs before giving result
@@ -47,18 +51,24 @@ module mkFixedTb (Empty);
 
    IfcRandomNumberGenerator#(Int32WORD, Int32WORD) rng <- mkWellPRNG  ();
 
-  // rule putRequest(i>1);
-    //CosSinPair#(33,52) cos_sin_pair <- cos_and_sin.getCosSinPair;
+  rule putRequest(i>1);
+    CosSinPair#(33,52) cos_sin_pair <- cos_and_sin.getCosSinPair;
     //fxptWrite( 10, cos_sin_pair.cos ) ; $display("" ); 
-   // FixedPoint#(33, 52) angle_adjustment = fromUInt(i*i);
-   // sqrt.request.put(angle_adjustment);
- // endrule
+    $display(i);
+    let val = fromUInt(unpack(i));
+     fxptWrite( 10, val) ; $display("" ); 
+   FixedPoint#(33, 52) angle_adjustment = fromUInt(i*i);
+    sqrt.request.put(angle_adjustment);
+  endrule
 
-  //rule getResponse(i>1 && i < 100);
+  rule getResponse(i>1 && i < 100);
     //let resp <- sqrt.response.get;
-   // $display(i);    
-    //fxptWrite( 10, tpl_1(resp)) ; $display("" ); 
- // endrule
+   // $display(i);   
+   $display("**");
+   let resp <- sqrt.response.get;
+    let val = tpl_1(resp);
+    fxptWrite( 10, val) ; $display("" ); 
+   endrule
 
   rule initialize(i == 0);
       rng.initialize (fromInteger (0));
@@ -66,20 +76,21 @@ module mkFixedTb (Empty);
   endrule
 
   rule interpolate(i > 0 && i < 100);
-    //Int32WORD v <-  rng.get();
-   // uniform_rand_num <= (0.000000000232830643653869628906)* fromUInt(unpack(v)); 
+    Int32WORD v <-  rng.get();
+    uniform_rand_num <= (0.000000000232830643653869628906)* fromUInt(unpack(v)); 
     //uniform_rand_num <= 0.00001*fromUInt(i);
+    fxptWrite( 10, uniform_rand_num) ; $display("" ); 
      i <= i + 1;
 
      $display(i);
 
-    //angle_q.enq(uniform_rand_num);
+    angle_q.enq(uniform_rand_num);
   endrule
 
- // rule calculate_adjustment_put(True);
-   // cos_and_sin.putAngle(angle_q.first);
-   // angle_q.deq;
- // endrule
+ rule calculate_adjustment_put(True);
+    cos_and_sin.putAngle(angle_q.first);
+    angle_q.deq;
+  endrule
 
  // rule printS(True);
      //CosSinPair#(33,52) cos_sin_pair <- cos_and_sin.getCosSinPair;
