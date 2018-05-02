@@ -1,0 +1,1089 @@
+rule interpolate i =          1
+
+rule getRandomNumber, uniform_rand_num = 
+0.0096580190
+rule putSquare, i =          2
+
+4.0000000000
+rule interpolate i =          2
+
+rule getRandomNumber, uniform_rand_num = 
+0.9046072778
+rule putSquare, i =          3
+
+9.0000000000
+rule interpolate i =          3
+
+rule getRandomNumber, uniform_rand_num = 
+0.1953275569
+rule interpolate i =          4
+
+rule getCosPair, i =          5
+
+rule getCosPair, cos_sin_pair.cos = 
+0.9999999999
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.0000000000
+rule getRandomNumber, uniform_rand_num = 
+0.2604828255
+rule interpolate i =          5
+
+rule getCosPair, i =          6
+
+rule getCosPair, cos_sin_pair.cos = 
+0.9981588928
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.0606550777
+rule getRandomNumber, uniform_rand_num = 
+0.0009963174
+rule interpolate i =          6
+
+rule getCosPair, i =          7
+
+rule getCosPair, cos_sin_pair.cos = 
+0.8257041900
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.5641035403
+rule getRandomNumber, uniform_rand_num = 
+0.0403660594
+rule interpolate i =          7
+
+rule getCosPair, i =          8
+
+rule getCosPair, cos_sin_pair.cos = 
+0.3367829955
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.9415824061
+rule getRandomNumber, uniform_rand_num = 
+0.1702029914
+rule interpolate i =          8
+
+rule getCosPair, i =          9
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.0658323979
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.9978308018
+rule getRandomNumber, uniform_rand_num = 
+0.9208828487
+rule interpolate i =          9
+
+rule getCosPair, i =         10
+
+rule getCosPair, cos_sin_pair.cos = 
+0.9999804566
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.0062689801
+rule getRandomNumber, uniform_rand_num = 
+0.3173647439
+rule interpolate i =         10
+
+rule getCosPair, i =         11
+
+rule getCosPair, cos_sin_pair.cos = 
+0.9680065021
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.2509255377
+rule getRandomNumber, uniform_rand_num = 
+0.4894763752
+rule interpolate i =         11
+
+rule getCosPair, i =         12
+
+rule getCosPair, cos_sin_pair.cos = 
+0.4806127487
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.8769330644
+rule getRandomNumber, uniform_rand_num = 
+0.8580270523
+rule interpolate i =         12
+
+rule getCosPair, i =         13
+
+rule getCosPair, cos_sin_pair.cos = 
+0.8789784512
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.4768617157
+rule getRandomNumber, uniform_rand_num = 
+0.0794243067
+rule interpolate i =         13
+
+rule getCosPair, i =         14
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.4107245601
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.9117595897
+rule getRandomNumber, uniform_rand_num = 
+0.9825488193
+rule interpolate i =         14
+
+rule getCosPair, i =         15
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.9978146997
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.0660760070
+rule getRandomNumber, uniform_rand_num = 
+0.6776366592
+rule interpolate i =         15
+
+rule getCosPair, i =         16
+
+rule getCosPair, cos_sin_pair.cos = 
+0.6278075366
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.7783687498
+rule getRandomNumber, uniform_rand_num = 
+0.0185655490
+rule interpolate i =         16
+
+rule getCosPair, i =         17
+
+rule getCosPair, cos_sin_pair.cos = 
+0.8780454050
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.4785775593
+rule getRandomNumber, uniform_rand_num = 
+0.7747757569
+rule interpolate i =         17
+
+rule getCosPair, i =         18
+
+rule getCosPair, cos_sin_pair.cos = 
+0.9939963274
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.1094144179
+rule getRandomNumber, uniform_rand_num = 
+0.4244298490
+rule interpolate i =         18
+
+rule getCosPair, i =         19
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.4391607241
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.8984086331
+rule getRandomNumber, uniform_rand_num = 
+0.9615143933
+rule interpolate i =         19
+
+rule getCosPair, i =         20
+
+rule getCosPair, cos_sin_pair.cos = 
+0.9932038682
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.1163885294
+rule getRandomNumber, uniform_rand_num = 
+0.7638791759
+rule interpolate i =         20
+
+rule getCosPair, i =         21
+
+rule getCosPair, cos_sin_pair.cos = 
+0.1550690536
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.9879037414
+rule getRandomNumber, uniform_rand_num = 
+0.3390434533
+rule interpolate i =         21
+
+rule getCosPair, i =         22
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.8893827440
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.4571635903
+rule getRandomNumber, uniform_rand_num = 
+0.5875067124
+rule interpolate i =         22
+
+rule getCosPair, i =         23
+
+rule getCosPair, cos_sin_pair.cos = 
+0.9709096702
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.2394464990
+rule getRandomNumber, uniform_rand_num = 
+0.4538884188
+rule interpolate i =         23
+
+rule getCosPair, i =         24
+
+rule getCosPair, cos_sin_pair.cos = 
+0.0870651008
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.9962027313
+rule getRandomNumber, uniform_rand_num = 
+0.6132574276
+rule interpolate i =         24
+
+rule getCosPair, i =         25
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.5307620832
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.8475209877
+rule getRandomNumber, uniform_rand_num = 
+0.4359161364
+rule interpolate i =         25
+
+rule getCosPair, i =         26
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.8526316630
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.5225126418
+rule getRandomNumber, uniform_rand_num = 
+0.9799528268
+rule interpolate i =         26
+
+rule getCosPair, i =         27
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.9583150864
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.2857138583
+rule getRandomNumber, uniform_rand_num = 
+0.3839486434
+rule interpolate i =         27
+
+rule getCosPair, i =         28
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.7573091162
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.6530567480
+rule getRandomNumber, uniform_rand_num = 
+0.8585283015
+rule interpolate i =         28
+
+rule getCosPair, i =         29
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.9200372892
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.3918310862
+rule getRandomNumber, uniform_rand_num = 
+0.0156054997
+rule interpolate i =         29
+
+rule getCosPair, i =         30
+
+rule getCosPair, cos_sin_pair.cos = 
+0.9920814005
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.1255974057
+rule getRandomNumber, uniform_rand_num = 
+0.4068232278
+rule interpolate i =         30
+
+rule getCosPair, i =         31
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.7457146794
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.6662655856
+rule getRandomNumber, uniform_rand_num = 
+0.2370018095
+rule interpolate i =         31
+
+rule getCosPair, i =         32
+
+rule getCosPair, cos_sin_pair.cos = 
+0.6302747752
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.7763722827
+rule getRandomNumber, uniform_rand_num = 
+0.7802778503
+rule interpolate i =         32
+
+rule getCosPair, i =         33
+
+rule getCosPair, cos_sin_pair.cos = 
+0.9951980885
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.0978824714
+rule getRandomNumber, uniform_rand_num = 
+0.5954796881
+rule interpolate i =         33
+
+rule getCosPair, i =         34
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.8334728315
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.5525606327
+rule getRandomNumber, uniform_rand_num = 
+0.7205218833
+rule interpolate i =         34
+
+rule getCosPair, i =         35
+
+rule getCosPair, cos_sin_pair.cos = 
+0.0815915450
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.9966659588
+rule getRandomNumber, uniform_rand_num = 
+0.1375467074
+rule interpolate i =         35
+
+rule getCosPair, i =         36
+
+rule getCosPair, cos_sin_pair.cos = 
+0.1890952644
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.9819588559
+rule getRandomNumber, uniform_rand_num = 
+0.1807568692
+rule interpolate i =         36
+
+rule getCosPair, i =         37
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.8253941944
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.5645570276
+rule getRandomNumber, uniform_rand_num = 
+0.5862455358
+rule interpolate i =         37
+
+rule getCosPair, i =         38
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.1841786004
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.9828929020
+rule getRandomNumber, uniform_rand_num = 
+0.3013599794
+rule interpolate i =         38
+
+rule getCosPair, i =         39
+
+rule getCosPair, cos_sin_pair.cos = 
+0.6492121297
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.7606075363
+rule getRandomNumber, uniform_rand_num = 
+0.5564108018
+rule interpolate i =         39
+
+rule getCosPair, i =         40
+
+rule getCosPair, cos_sin_pair.cos = 
+0.4214912130
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.9068326036
+rule getRandomNumber, uniform_rand_num = 
+0.1451931190
+rule interpolate i =         40
+
+rule getCosPair, i =         41
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.8567191934
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.5157833240
+rule getRandomNumber, uniform_rand_num = 
+0.1006313145
+rule interpolate i =         41
+
+rule getCosPair, i =         42
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.3171146605
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.9483873184
+rule getRandomNumber, uniform_rand_num = 
+0.0098799846
+rule interpolate i =         42
+
+rule getCosPair, i =         43
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.9378475923
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.3470477017
+rule getRandomNumber, uniform_rand_num = 
+0.8004808800
+rule interpolate i =         43
+
+rule getCosPair, i =         44
+
+rule getCosPair, cos_sin_pair.cos = 
+0.6119573665
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.7908908870
+rule getRandomNumber, uniform_rand_num = 
+0.1563120882
+rule interpolate i =         44
+
+rule getCosPair, i =         45
+
+rule getCosPair, cos_sin_pair.cos = 
+0.8066773522
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.5909922699
+rule getRandomNumber, uniform_rand_num = 
+0.6530438596
+rule interpolate i =         45
+
+rule getCosPair, i =         46
+
+rule getCosPair, cos_sin_pair.cos = 
+0.9980727781
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.0620559695
+rule getRandomNumber, uniform_rand_num = 
+0.0309518110
+rule interpolate i =         46
+
+rule getCosPair, i =         47
+
+rule getCosPair, cos_sin_pair.cos = 
+0.3118633253
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.9501270862
+rule getRandomNumber, uniform_rand_num = 
+0.3756488752
+rule interpolate i =         47
+
+rule getCosPair, i =         48
+
+rule getCosPair, cos_sin_pair.cos = 
+0.5552539034
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.8316810184
+rule getRandomNumber, uniform_rand_num = 
+0.5407346971
+rule interpolate i =         48
+
+rule getCosPair, i =         49
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.5721900520
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.8201211849
+rule getRandomNumber, uniform_rand_num = 
+0.5081679550
+rule putSquare, i =         49
+
+2401.0000000000
+rule interpolate i =         49
+
+rule getCosPair, i =         50
+
+rule getCosPair, cos_sin_pair.cos = 
+0.9811537962
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.1932289880
+rule getRandomNumber, uniform_rand_num = 
+0.5215536251
+rule getSquare, i =         50
+
+rule getSquare, val = 
+2.0000000000
+rule interpolate i =         50
+
+rule getCosPair, i =         51
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.7100019475
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.7041998638
+rule getRandomNumber, uniform_rand_num = 
+0.0925121414
+rule interpolate i =         51
+
+rule getCosPair, i =         52
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.9674219272
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.2531699595
+rule getRandomNumber, uniform_rand_num = 
+0.6718689368
+rule interpolate i =         52
+
+rule getCosPair, i =         53
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.9986849116
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.0512704679
+rule getRandomNumber, uniform_rand_num = 
+0.6191339709
+rule interpolate i =         53
+
+rule getCosPair, i =         54
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.9908405808
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.1350376136
+rule getRandomNumber, uniform_rand_num = 
+0.3240789477
+rule interpolate i =         54
+
+rule getCosPair, i =         55
+
+rule getCosPair, cos_sin_pair.cos = 
+0.8357588388
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.5490968740
+rule getRandomNumber, uniform_rand_num = 
+0.0012360382
+rule interpolate i =         55
+
+rule getCosPair, i =         56
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.4714342169
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.8819013509
+rule getRandomNumber, uniform_rand_num = 
+0.4447701757
+rule interpolate i =         56
+
+rule getCosPair, i =         57
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.7326851457
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.6805679179
+rule getRandomNumber, uniform_rand_num = 
+0.0992042089
+rule interpolate i =         57
+
+rule getCosPair, i =         58
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.4488403678
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.8936120735
+rule getRandomNumber, uniform_rand_num = 
+0.9844750452
+rule interpolate i =         58
+
+rule getCosPair, i =         59
+
+rule getCosPair, cos_sin_pair.cos = 
+0.9999697270
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.0077947872
+rule getRandomNumber, uniform_rand_num = 
+0.4825933342
+rule interpolate i =         59
+
+rule getCosPair, i =         60
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.9403842855
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.3401141121
+rule getRandomNumber, uniform_rand_num = 
+0.3089174493
+rule interpolate i =         60
+
+rule getCosPair, i =         61
+
+rule getCosPair, cos_sin_pair.cos = 
+0.8119371183
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.5837450895
+rule getRandomNumber, uniform_rand_num = 
+0.6649985467
+rule interpolate i =         61
+
+rule getCosPair, i =         62
+
+rule getCosPair, cos_sin_pair.cos = 
+0.9952457640
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.0973965237
+rule getRandomNumber, uniform_rand_num = 
+0.2263213722
+rule interpolate i =         62
+
+rule getCosPair, i =         63
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.9940230102
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.1091717403
+rule getRandomNumber, uniform_rand_num = 
+0.6566529711
+rule interpolate i =         63
+
+rule getCosPair, i =         64
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.3617721191
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.9322666718
+rule getRandomNumber, uniform_rand_num = 
+0.3770955272
+rule interpolate i =         64
+
+rule getCosPair, i =         65
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.5090238791
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.8607525220
+rule getRandomNumber, uniform_rand_num = 
+0.8911774728
+rule interpolate i =         65
+
+rule getCosPair, i =         66
+
+rule getCosPair, cos_sin_pair.cos = 
+0.1482521489
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.9889497025
+rule getRandomNumber, uniform_rand_num = 
+0.0663855024
+rule interpolate i =         66
+
+rule getCosPair, i =         67
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.5534759761
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.8328652697
+rule getRandomNumber, uniform_rand_num = 
+0.0594182841
+rule interpolate i =         67
+
+rule getCosPair, i =         68
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.7163766296
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.6977139372
+rule getRandomNumber, uniform_rand_num = 
+0.7471869306
+rule interpolate i =         68
+
+rule getCosPair, i =         69
+
+rule getCosPair, cos_sin_pair.cos = 
+0.7752169358
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.6316952715
+rule getRandomNumber, uniform_rand_num = 
+0.6262099947
+rule interpolate i =         69
+
+rule getCosPair, i =         70
+
+rule getCosPair, cos_sin_pair.cos = 
+0.9142741661
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.4050962390
+rule getRandomNumber, uniform_rand_num = 
+0.3948382711
+rule interpolate i =         70
+
+rule getCosPair, i =         71
+
+rule getCosPair, cos_sin_pair.cos = 
+0.9311137885
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.3647291139
+rule getRandomNumber, uniform_rand_num = 
+0.1084543173
+rule interpolate i =         71
+
+rule getCosPair, i =         72
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.0176642104
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.9998440825
+rule getRandomNumber, uniform_rand_num = 
+0.6683968231
+rule interpolate i =         72
+
+rule getCosPair, i =         73
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.7017255111
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.7124475564
+rule getRandomNumber, uniform_rand_num = 
+0.1666061782
+rule interpolate i =         73
+
+rule getCosPair, i =         74
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.7895456836
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.6136919644
+rule getRandomNumber, uniform_rand_num = 
+0.7187858372
+rule interpolate i =         74
+
+rule getCosPair, i =         75
+
+rule getCosPair, cos_sin_pair.cos = 
+0.7766799415
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.6298956121
+rule getRandomNumber, uniform_rand_num = 
+0.4553239226
+rule interpolate i =         75
+
+rule getCosPair, i =         76
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.4905749466
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.8713991252
+rule getRandomNumber, uniform_rand_num = 
+0.4418978204
+rule interpolate i =         76
+
+rule getCosPair, i =         77
+
+rule getCosPair, cos_sin_pair.cos = 
+0.5003297839
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.8658350425
+rule getRandomNumber, uniform_rand_num = 
+0.1651755019
+rule interpolate i =         77
+
+rule getCosPair, i =         78
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.1948456160
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.9808340326
+rule getRandomNumber, uniform_rand_num = 
+0.3479687704
+rule interpolate i =         78
+
+rule getCosPair, i =         79
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.9608568530
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.2770457030
+rule getRandomNumber, uniform_rand_num = 
+0.5844995316
+rule interpolate i =         79
+
+rule getCosPair, i =         80
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.9341091980
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.3569877026
+rule getRandomNumber, uniform_rand_num = 
+0.2680553151
+rule interpolate i =         80
+
+rule getCosPair, i =         81
+
+rule getCosPair, cos_sin_pair.cos = 
+0.5080779212
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.8613112327
+rule getRandomNumber, uniform_rand_num = 
+0.8790754489
+rule interpolate i =         81
+
+rule getCosPair, i =         82
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.5774339458
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.8164375370
+rule getRandomNumber, uniform_rand_num = 
+0.9728550827
+rule interpolate i =         82
+
+rule getCosPair, i =         83
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.8623328330
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.5063420767
+rule getRandomNumber, uniform_rand_num = 
+0.7845149007
+rule interpolate i =         83
+
+rule getCosPair, i =         84
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.1131750813
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.9935751681
+rule getRandomNumber, uniform_rand_num = 
+0.7039783408
+rule interpolate i =         84
+
+rule getCosPair, i =         85
+
+rule getCosPair, cos_sin_pair.cos = 
+0.7249659772
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.6887848325
+rule getRandomNumber, uniform_rand_num = 
+0.8008836824
+rule interpolate i =         85
+
+rule getCosPair, i =         86
+
+rule getCosPair, cos_sin_pair.cos = 
+0.9854956350
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.1697014053
+rule getRandomNumber, uniform_rand_num = 
+0.4876203977
+rule interpolate i =         86
+
+rule getCosPair, i =         87
+
+rule getCosPair, cos_sin_pair.cos = 
+0.2151394379
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.9765834506
+rule getRandomNumber, uniform_rand_num = 
+0.5853036919
+rule interpolate i =         87
+
+rule getCosPair, i =         88
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.2851288960
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.9584892938
+rule getRandomNumber, uniform_rand_num = 
+0.7848883992
+rule interpolate i =         88
+
+rule getCosPair, i =         89
+
+rule getCosPair, cos_sin_pair.cos = 
+0.3142978940
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.9493245217
+rule getRandomNumber, uniform_rand_num = 
+0.3331617375
+rule interpolate i =         89
+
+rule getCosPair, i =         90
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.9969770706
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.0776977110
+rule getRandomNumber, uniform_rand_num = 
+0.5334386804
+rule interpolate i =         90
+
+rule getCosPair, i =         91
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.8597566939
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.5107040638
+rule getRandomNumber, uniform_rand_num = 
+0.8079071703
+rule interpolate i =         91
+
+rule getCosPair, i =         92
+
+rule getCosPair, cos_sin_pair.cos = 
+0.2174634566
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.9760685727
+rule getRandomNumber, uniform_rand_num = 
+0.9780979277
+rule interpolate i =         92
+
+rule getCosPair, i =         93
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.4990609346
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.8665670183
+rule getRandomNumber, uniform_rand_num = 
+0.6023291184
+rule interpolate i =         93
+
+rule getCosPair, i =         94
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.9780057892
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.2085782587
+rule getRandomNumber, uniform_rand_num = 
+0.4000165627
+rule interpolate i =         94
+
+rule getCosPair, i =         95
+
+rule getCosPair, cos_sin_pair.cos = 
+0.3558474215
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.9345441810
+rule getRandomNumber, uniform_rand_num = 
+0.7196605009
+rule putSquare, i =         95
+
+9025.0000000000
+rule interpolate i =         95
+
+rule getCosPair, i =         96
+
+rule getCosPair, cos_sin_pair.cos = 
+0.9905498488
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.1371539671
+rule getRandomNumber, uniform_rand_num = 
+0.6708530588
+rule getSquare, i =         96
+
+rule getSquare, val = 
+3.0000000000
+rule interpolate i =         96
+
+rule getCosPair, i =         97
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.8003190052
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.5995746021
+rule getRandomNumber, uniform_rand_num = 
+0.7863655302
+rule interpolate i =         97
+
+rule getCosPair, i =         98
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.8090771357
+rule getCosPair, cos_sin_pair.sin = 
+# -
+0.5877026476
+rule getRandomNumber, uniform_rand_num = 
+0.7611683094
+rule interpolate i =         98
+
+rule getCosPair, i =         99
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.1894548558
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.9818895413
+rule getRandomNumber, uniform_rand_num = 
+0.6784705235
+rule interpolate i =         99
+
+rule getCosPair, i =        100
+
+rule getCosPair, cos_sin_pair.cos = 
+-0.4770762958
+rule getCosPair, cos_sin_pair.sin = 
+# -
+-0.8788620037
+rule getRandomNumber, uniform_rand_num = 
+0.2010924196
+FIM
