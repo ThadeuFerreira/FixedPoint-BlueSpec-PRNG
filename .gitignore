@@ -5,6 +5,7 @@
 *.so
 *.ba
 *.cxx
+out
 
 # Object files
 *.o
