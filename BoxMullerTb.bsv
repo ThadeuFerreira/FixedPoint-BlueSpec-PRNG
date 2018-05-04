@@ -55,32 +55,6 @@ module mkBoxMullerTb (Empty);
     Reg#(int) cont <- mkReg (0);
     IfcBoxMullerInterface#(Int32WORD, TupleUInt32, SqrtTFx) boxmuller <- mkBoxMuller();
 
-
-    function Stmt functionOfSeq(  );
-        return seq                     
-                    action 
-                        _ii <= fromInt(cont)*fromInt(cont);
-                        $display ("cont = %d\n", cont);
-                        $display("### ", fshow(_ii) , " ###\n");
-                    endaction
-                    action
-                        let temptup <- boxmuller.get(_ii);  
-                        tup <= temptup;
-                    endaction      
-                    action           
-                        $display ("Numbers %d - %d", tpl_1(tup), tpl_2(tup));
-                        fxptWrite( 10, tpl_3(tup)); 
-                   
-                        $display("");
-                        $display("*** ", fshow(tpl_3(tup)) , " ***\n");
-                    endaction
-                    action 
-                        i <= i + 1;
-                        cont <= cont +1;
-                    endaction
-                endseq;
-    endfunction
-
     Stmt verify_stmt =
         seq        
         // Get TestU01 test type and set N.
@@ -93,10 +67,32 @@ module mkBoxMullerTb (Empty);
         endaction
 
         $display("#==================================================================");
-
+        
             
         while (i < (1 << n))  seq       
-           functionOfSeq(  );    
+           action 
+                _ii <= fromInt(cont)*fromInt(cont);
+                
+            endaction
+            
+                
+            boxmuller.run(_ii);
+            boxmuller.run(0);
+            
+            action
+                let temptup <- boxmuller.get();  
+                tup <= temptup;
+            endaction      
+            $display("#", $time);            
+            $display ("Numbers %d - %d", tpl_1(tup), tpl_2(tup), $time);
+            fxptWrite( 10, tpl_3(tup)); 
+            $display("");      
+
+            action    
+                i <= i + 1;                     
+                cont <= cont +1;
+            endaction
+              
                
         endseq
         

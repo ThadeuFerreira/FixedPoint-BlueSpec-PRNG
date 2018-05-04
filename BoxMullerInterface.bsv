@@ -12,7 +12,9 @@ interface IfcBoxMullerInterface#(
    method Action initialize (seed_type s1, seed_type s2);
 
    // Get a number from RNG.
-   method ActionValue#(out_type) get (input_type val);
+   method Action run (input_type val);
+
+   method ActionValue#(out_type) get ();
 
 endinterface: IfcBoxMullerInterface
 

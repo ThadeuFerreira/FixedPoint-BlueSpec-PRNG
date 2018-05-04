@@ -39,37 +39,34 @@ module mkBoxMuller (IfcBoxMullerInterface#(Int32WORD, TupleUInt32, SqrtTFx));
 
     Reg#(Int32WORD) v1 <- mkReg(0);
     Reg#(Int32WORD) v2 <- mkReg(0);
-    Reg#(SqrtTFx)		valsqrIn <- mkReg(1024);
-    Reg#(SqrtTFx)		valsqrOut <- mkReg(1);
+    Reg#(SqrtTFx)		valsqrIn <- mkReg(0);
+    Reg#(SqrtTFx)		valsqrOut <- mkReg(0);
     Reg#(TupleUInt32)	randtuple <- mkRegU;					
 
 	Server#(SqrtTFx,Tuple2#(SqrtTFx,Bool)) sqrtfxm <- mkFixedPointSquareRooter(1);
     FIFOF#(SqrtTFx) fCheck <- mkLFIFOF;
 
     Reg#(int) cycle <- mkReg(0);
-    Reg#(Bool) flag <- mkReg(True);
+    Reg#(Bool) flag <- mkReg(False);
 
-    function Action putSqrt();
-        action
+    rule counter;
+        //cycle <= cycle + 1;
+    endrule
+
+    rule putSqrt(cycle>0);
+            $display ("rule cycle = ", cycle);
+            $display("### ", fshow(valsqrIn) , " ###\n");
             sqrtfxm.request.put(valsqrIn);            
-        endaction
-    endfunction
+    endrule
 
-    function Action getSqrt();
-        action
+    rule getSqrt(cycle>0);
+            $display ("rule get cycle = ", cycle);
+            $display("### ", fshow(valsqrOut) , " ###\n");
             Tuple2#(SqrtTFx,Bool) retval <- sqrtfxm.response.get();
             valsqrOut <= tpl_1(retval);
-        endaction
-    endfunction
+    endrule
 
-    Stmt test =
-    seq         
-        putSqrt();        
-        getSqrt();       
- 
-    endseq;
-
-    FSM testFSM <- mkFSM(test);
+    
 
     method Action initialize (Int32WORD s1, Int32WORD s2);
         rgn1.initialize(s1);
@@ -77,25 +74,17 @@ module mkBoxMuller (IfcBoxMullerInterface#(Int32WORD, TupleUInt32, SqrtTFx));
     endmethod:initialize  
 
     method Action run (SqrtTFx nfx );  
-        if(flag)
-        action
-            let vt1 <- rgn1.get;
-            let vt2 <- rgn2.get; 
-            v1 <= vt1;
-            v2 <= vt2;   
-            valsqrIn  <=  nfx;           
-            testFSM.start; 
-            cycle <= cycle + 1; 
-            flag <= False;            
-        endaction
-        else
-        action            
-            flag <= True;
-        endaction
+        let vt1 <- rgn1.get;
+        let vt2 <- rgn2.get; 
+        v1 <= vt1;
+        v2 <= vt2;   
+        valsqrIn  <=  nfx;           
+         
+        cycle <= cycle + 1; 
     endmethod:run
 
-    method ActionValue#(TupleUInt32) get ( );      
-
+    method TupleUInt32 get ( );      
+  
         let tpl3 = tuple3(v1,v2, valsqrOut);
         return tpl3;
     endmethod:get

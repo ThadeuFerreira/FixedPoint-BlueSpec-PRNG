@@ -33,7 +33,7 @@ module mkSquareRooter#(Integer n)(Server#(UInt#(m),Tuple2#(UInt#(m),Bool)))
    FIFO#(Tuple4#(Maybe#(Bit#(m)),Bit#(m),Bit#(m),Bit#(m))) fFirst <- mkLFIFO;
 
    rule start;
-      let op <- toGet(fRequest).get;
+      let op <- toGet(fRequest).get;  
       let s = pack(op);
       Bit#(m) r = 0;
       Bit#(m) b = reverseBits(extend(2'b10));
