@@ -1,4 +1,3 @@
-
 package BoxMullerTb;
 
 
@@ -11,8 +10,10 @@ import FixedPoint::*;
 import FIFO::*;
 import RandomNumberGenerator::*;
 import BoxMullerInterface::*;
+import InterfaceLogTableFxdP::*;
 import WellPRNG::*;
 import BoxMuller::*;
+import LogTableFxdP::*;
 import Complex::*;
 import AirblueCommon::*;
 import AirblueTypes::*;
@@ -42,6 +43,8 @@ typedef 34 N_DIEHARD;      // Marsaglia's DIEHARD. Empirically determined.
 typedef 10 N_NIST; // NIST test. Empirically determined.
 typedef 4  VIZUAL;
 
+typedef FixedPoint#(33,32) SqrtTFx33;
+
 (* synthesize *)
 module mkBoxMullerTb (Empty);
        
@@ -54,6 +57,13 @@ module mkBoxMullerTb (Empty);
     Reg#(TupleUInt32) tup <- mkRegU;
     Reg#(int) cont <- mkReg (0);
     IfcBoxMullerInterface#(Int32WORD, TupleUInt32, SqrtTFx) boxmuller <- mkBoxMuller();
+    InterfaceLogTableFxdP#(SqrtTFx33,SqrtTFx33) mLUT <- mkLogTableFxdP();
+    Reg#(SqrtTFx33)		uniform_rand_num <- mkReg(0);
+
+    
+
+		
+
 
     Stmt verify_stmt =
         seq        
@@ -73,8 +83,7 @@ module mkBoxMullerTb (Empty);
            action 
                 _ii <= fromInt(cont)*fromInt(cont);
                 
-            endaction
-            
+            endaction            
                 
             boxmuller.run(_ii);
             boxmuller.run(0);
@@ -86,7 +95,14 @@ module mkBoxMullerTb (Empty);
             $display("#", $time);            
             $display ("Numbers %d - %d", tpl_1(tup), tpl_2(tup), $time);
             fxptWrite( 10, tpl_3(tup)); 
-            $display("");      
+            $display("");  
+            action
+            	Int32WORD v = tpl_1(tup);
+                uniform_rand_num <= (0.000000000232830643653869628906)* fromUInt(unpack(v));                 
+                $display("# -");fxptWrite( 10, uniform_rand_num ) ; $display("" );                 
+                $display("! -");fxptWrite( 10, mLUT.get(uniform_rand_num) ) ; $display("" );
+
+            endaction    
 
             action    
                 i <= i + 1;                     
