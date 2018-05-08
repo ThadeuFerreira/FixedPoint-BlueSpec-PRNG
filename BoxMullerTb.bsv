@@ -90,17 +90,22 @@ module mkBoxMullerTb (Empty);
             
             action
                 let temptup <- boxmuller.get();  
-                tup <= temptup;
+                tup <= temptup;                
             endaction      
-            $display("#", $time);            
-            $display ("Numbers %d - %d", tpl_1(tup), tpl_2(tup), $time);
-            fxptWrite( 10, tpl_3(tup)); 
-            $display("");  
+            $display("*", $time);            
+                         
             action
             	Int32WORD v = tpl_1(tup);
-                uniform_rand_num <= (0.000000000232830643653869628906)* fromUInt(unpack(v));                 
-                $display("# -");fxptWrite( 10, uniform_rand_num ) ; $display("" );                 
-                $display("! -");fxptWrite( 10, mLUT.get(uniform_rand_num) ) ; $display("" );
+                uniform_rand_num <= (0.000000000232830643653869628906)* fromUInt(unpack(v));                       
+            endaction
+            
+            mLUT.run(uniform_rand_num);
+            mLUT.run(0);
+            
+            action
+                let logv <- mLUT.get();   
+                $display("# -");fxptWrite( 10, uniform_rand_num ) ; $display("" );             
+                $display("! -");fxptWrite( 10, logv ) ; $display("" );
 
             endaction    
 

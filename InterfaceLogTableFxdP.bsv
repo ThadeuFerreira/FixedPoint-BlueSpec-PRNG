@@ -5,7 +5,9 @@ interface InterfaceLogTableFxdP#(
    type out_type
 );
 
-   method out_type get (input_type i);
+    method Action run(input_type input_val );
+
+    method ActionValue#(out_type) get  ();
  
 endinterface: InterfaceLogTableFxdP
 
