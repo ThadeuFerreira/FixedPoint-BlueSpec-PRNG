@@ -30,59 +30,25 @@ module mkLogTableFxdP (InterfaceLogTableFxdP#(SqrtTFx33,SqrtTFx33));
 
     Reg#(SqrtTFx33)		result <- mkReg(0);
     
-    function SqrtTFx33 logTable (SqrtTFx33 i);
-        SqrtTFx33 retval;
-        if((i >= fromReal(0.9))&&(i < fromReal(1)) )
-        begin
-            retval = fromReal(-0.10536051565782630123); 
-        end
-        else if((i >= fromReal(0.8))&&(i < fromReal(0.9)) ) 
-        begin
-            retval = fromReal(-0.22314355131420975577); 
-        end
-        else if((i >= fromReal(0.7))&&(i < fromReal(0.8)) ) 
-        begin
-            retval = fromReal(-0.35667494393873237891); 
-        end
-        else if((i >= fromReal(0.6))&&(i < fromReal(0.7)) ) 
-        begin
-            retval = fromReal(-0.51082562376599068321); 
-        end
-        else if((i >= fromReal(0.5))&&(i < fromReal(0.6)) ) 
-        begin
-            retval = fromReal(-0.69314718055994530942); 
-        end
-        else if((i >= fromReal(0.4))&&(i < fromReal(0.5)) ) 
-        begin
-            retval = fromReal(-0.91629073187415506518); 
-        end
-        else if((i >= fromReal(0.3))&&(i < fromReal(0.4)) ) 
-        begin
-            retval = fromReal(-1.20397280432593599262); 
-        end
-        else if((i >= fromReal(0.2))&&(i < fromReal(0.3)) ) 
-        begin
-            retval = fromReal(-1.6094379124341003746); 
-        end
-        else if((i >= fromReal(0.1))&&(i < fromReal(2)) ) 
-        begin
-            retval = fromReal(-2.30258509299404568402); 
-        end
-        else if((i > fromReal(0))&&(i < fromReal(0.1)) ) 
-        begin
-            retval = fromReal(-2.30258509299404568402*1000); 
-        end
-        else begin
-            retval = fromReal(0);
-        end
-        return retval;
-    endfunction:logTable
- 
+    function SqrtTFx33 mlog2 (SqrtTFx33 val);
+        Int32WORD bitVal = val.f;
+        //bitVal = reverseBits(bitVal);
+        let zeros = countZerosMSB(bitVal);    
+            
+        //SqrtTFx33 output_val =  0.69314718*(val*0.000000011920928955078125 - 126.94269504);
+        SqrtTFx33 output_val = fromUInt(zeros);
+        Int32WORD fval = bitVal << (zeros + 1);
+        output_val.f = -fval -1 ;
+        //output_val.f = truncate(pack(bitVal));
+        
+        return output_val;
+    endfunction:mlog2
+       
 
     method Action run(SqrtTFx33 input_val );
         if(flag)
         action            
-            result <= logTable(input_val);
+            result <= mlog2(input_val);
             cycle <= cycle + 1;
             flag <= False;
         endaction
@@ -95,8 +61,8 @@ module mkLogTableFxdP (InterfaceLogTableFxdP#(SqrtTFx33,SqrtTFx33));
 
     method ActionValue#(SqrtTFx33) get (  ); 
         
-
-        return result;
+        let resp = result;
+        return resp;
     endmethod:get
 
 

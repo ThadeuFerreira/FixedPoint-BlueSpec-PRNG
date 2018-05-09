@@ -41,7 +41,7 @@ typedef 41 N_CRUSH;        // TestU01 Crush Battery. TestU01 user guide fails! E
 typedef 62 N_BIG_CRUSH;    // TestU01 Big Crush Battery. TestU01 user guide fails!
 typedef 34 N_DIEHARD;      // Marsaglia's DIEHARD. Empirically determined.
 typedef 10 N_NIST; // NIST test. Empirically determined.
-typedef 4  VIZUAL;
+typedef 5  VIZUAL;
 
 typedef FixedPoint#(33,32) SqrtTFx33;
 
@@ -59,8 +59,7 @@ module mkBoxMullerTb (Empty);
     IfcBoxMullerInterface#(Int32WORD, TupleUInt32, SqrtTFx) boxmuller <- mkBoxMuller();
     InterfaceLogTableFxdP#(SqrtTFx33,SqrtTFx33) mLUT <- mkLogTableFxdP();
     Reg#(SqrtTFx33)		uniform_rand_num <- mkReg(0);
-
-    
+    Reg#(SqrtTFx33)		fixCounter <- mkReg(0);  
 
 		
 
@@ -104,14 +103,18 @@ module mkBoxMullerTb (Empty);
             
             action
                 let logv <- mLUT.get();   
-                $display("# -");fxptWrite( 10, uniform_rand_num ) ; $display("" );             
-                $display("! -");fxptWrite( 10, logv ) ; $display("" );
+               // $display("# -");fxptWrite( 10, uniform_rand_num ) ; $display("" );             
+               $display("! -");fxptWrite( 10, uniform_rand_num ) ; $display("" );
+               $display("! -");fxptWrite( 10, logv ) ; $display("" );
+               $display("### ", fshow(uniform_rand_num) , " ###\n");
+               $display("### ", fshow(logv) , " ###\n");
 
             endaction    
 
             action    
                 i <= i + 1;                     
                 cont <= cont +1;
+                fixCounter <= fixCounter + 0.0625;
             endaction
               
                
