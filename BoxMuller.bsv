@@ -11,6 +11,8 @@ import FixedPoint::*;
 import FIFO::*;
 import RandomNumberGenerator::*;
 import BoxMullerInterface::*;
+import LogTableFxdP::*;
+import InterfaceLogTableFxdP::*;
 import WellPRNG::*;
 import Complex::*;
 import AirblueCommon::*;
@@ -30,7 +32,8 @@ import Assert::*;
 
 typedef UInt#(64) SqrtT;
 typedef FixedPoint#(32,32) SqrtTFx;
-typedef Tuple3#(Int32WORD, Int32WORD, SqrtTFx) TupleUInt32; 
+typedef FixedPoint#(33,32) SqrtTFx33;
+typedef Tuple4#(Int32WORD, Int32WORD, SqrtTFx, SqrtTFx) TupleUInt32; 
 
 (* synthesize *)
 module mkBoxMuller (IfcBoxMullerInterface#(Int32WORD, TupleUInt32, SqrtTFx));
@@ -44,6 +47,11 @@ module mkBoxMuller (IfcBoxMullerInterface#(Int32WORD, TupleUInt32, SqrtTFx));
     Reg#(TupleUInt32)	randtuple <- mkRegU;					
 
 	Server#(SqrtTFx,Tuple2#(SqrtTFx,Bool)) sqrtfxm <- mkFixedPointSquareRooter(1);
+    InterfaceLogTableFxdP#(SqrtTFx33,SqrtTFx33) mLUT <- mkLogTableFxdP();
+    Reg#(SqrtTFx33)		r1 <- mkReg(0);
+    Reg#(SqrtTFx33)		r2 <- mkReg(0);
+    Reg#(SqrtTFx33)		x_1 <- mkReg(0);
+    Reg#(SqrtTFx33)		x_2 <- mkReg(0);
     FIFOF#(SqrtTFx) fCheck <- mkLFIFOF;
 
     Reg#(int) cycle <- mkReg(0);
@@ -63,7 +71,7 @@ module mkBoxMuller (IfcBoxMullerInterface#(Int32WORD, TupleUInt32, SqrtTFx));
     endfunction
 
     Stmt test =
-    seq         
+    seq               
         putSqrt();        
         getSqrt();       
  
@@ -81,9 +89,22 @@ module mkBoxMuller (IfcBoxMullerInterface#(Int32WORD, TupleUInt32, SqrtTFx));
         action
             let vt1 <- rgn1.get;
             let vt2 <- rgn2.get; 
-            v1 <= vt1;
-            v2 <= vt2;   
-            valsqrIn  <=  nfx;           
+            r1 <= (0.000000000232830643653869628906)* fromUInt(unpack(vt1));
+            r2 <= (0.000000000232830643653869628906)* fromUInt(unpack(vt2));
+            SqrtTFx33 x1 = r1*(2.0) -1.0;
+            SqrtTFx33 x2 = r2*(2.0) -1.0;
+            x_1 <= x1;
+            x_2 <= x2;
+            let w = x1*x1 + x2*x2;
+            mLUT.run(w);
+            let sw <- mLUT.get();
+            let sw2  =  2.0*(sw); 
+            let sw3 = sw2/w;   
+            SqrtTFx tva;
+            tva.i = nfx.i;
+            tva.f = nfx.f;
+            valsqrIn <= tva;
+
             testFSM.start; 
             cycle <= cycle + 1; 
             flag <= False;            
@@ -95,9 +116,12 @@ module mkBoxMuller (IfcBoxMullerInterface#(Int32WORD, TupleUInt32, SqrtTFx));
     endmethod:run
 
     method ActionValue#(TupleUInt32) get ( );      
-
-        let tpl3 = tuple3(v1,v2, valsqrOut);
-        return tpl3;
+        
+        
+        let tpl4 = tuple4(v1,v2, valsqrOut, valsqrOut);
+        return tpl4;
+    
+        
     endmethod:get
 
     
